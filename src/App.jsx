@@ -7,8 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { load: false };
+    this.ffmpeg = createFFmpeg({ log: true, videoInput: null });
   }
-  ffmpeg = createFFmpeg({ log: true, videoInput: null });
 
   load = async () => {
     await this.ffmpeg.load();
@@ -23,6 +23,14 @@ class App extends React.Component {
     this.setState({ video: file });
   };
 
+  generateGiffHandler = async () => {
+    this.ffmpeg.FS(
+      'writeFile',
+      'buffer.mp4',
+      await fetchFile(this.state.video),
+    );
+  };
+
   render() {
     return this.state.video ? (
       <div>
@@ -31,7 +39,9 @@ class App extends React.Component {
           width="650"
           controls
         ></video>
-        <button>Generate Giff</button>
+        <button onClick={() => this.generateGiffHandler()}>
+          Generate Giff
+        </button>
       </div>
     ) : (
       <div>
