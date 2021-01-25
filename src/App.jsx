@@ -18,18 +18,26 @@ class App extends React.Component {
     this.load();
   }
 
-  onChangeHandler = (e) => {
-    console.log(e);
+  onVideoChangeHandler = (e) => {
+    const file = e.target.files[0];
+    this.setState({ video: file });
   };
 
   render() {
     return this.state.video ? (
-      <div>hi</div>
+      <div>
+        <video
+          src={URL.createObjectURL(this.state.video)}
+          width="650"
+          controls
+        ></video>
+        <button>Generate Giff</button>
+      </div>
     ) : (
       <div>
         <input
           onChange={(e) => {
-            this.onChangeHandler(e);
+            this.onVideoChangeHandler(e);
           }}
           type="file"
           name="video"
