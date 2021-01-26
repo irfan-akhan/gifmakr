@@ -1,0 +1,16 @@
+navbar {
+  grid-area: 1/1/2/-1;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo {
+  justify-self: flex-start;
+  padding: 0 20px;
+}
+.name {
+  justify-self: flex-end;
+  width: 40%;
+  color: blue;
+}
