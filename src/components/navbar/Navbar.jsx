@@ -5,9 +5,8 @@ class Navbar extends Component {
   render() {
     return (
       <navbar>
-        <h3 className="logo">LOGO goes here</h3>
-        {/* <img src="" alt=""/> */}
-        <h1 className="name">Name is here</h1>
+        <h1 className="logo">v2g</h1>
+        <h3 className="name">Name is here</h3>
       </navbar>
     );
   }

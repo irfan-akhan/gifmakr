@@ -6,7 +6,11 @@ class Video extends Component {
   render() {
     return (
       <div className="videoElement">
-        <video width="100%" controls></video>
+        <video
+          width="80%"
+          src={URL.createObjectURL(this.props.videoSrc)}
+          controls
+        ></video>
       </div>
     );
   }
