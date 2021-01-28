@@ -7,7 +7,7 @@ class Video extends Component {
     return (
       <div className="videoElement">
         <video
-          width="80%"
+          width="100%"
           src={URL.createObjectURL(this.props.videoSrc)}
           controls
         ></video>

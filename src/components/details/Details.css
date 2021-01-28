@@ -1,0 +1,34 @@
+.details {
+  background-color: #ffffffe2;
+  width: 30%;
+  height: 50vh;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.arrow {
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  font-size: 30px;
+  color: #58468c;
+}
+.card {
+  border-radius: 10px;
+  box-shadow: 2px 3px 20px 0px #0000003a;
+}
+.title {
+  text-transform: uppercase;
+  color: #f37c5f;
+  font-weight: bold;
+}
+
+.description {
+  color: #58468c;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.description img {
+  width: 80%;
+}
