@@ -117,8 +117,8 @@ class App extends React.Component {
         <section className="how-it-works">
           <h1 className="heading">How it works</h1>
           <p className="text">
-            convert a video file into a giff. Just follw simple 3 step process
-            described below
+            Just follw simple 3 step process described below to convert your
+            video file into a giff.
           </p>
           <div className="steps">
             <Details
@@ -133,7 +133,7 @@ class App extends React.Component {
             />
             <Details
               title="Download"
-              description="Download giff file and share "
+              description="Download your giff and share "
             />
           </div>
         </section>
@@ -144,7 +144,7 @@ class App extends React.Component {
                 <Video videoSrc={this.state.video} />
                 <div className="input-group">
                   <div className="label">
-                    <label htmlFor="start">Statring point: </label>
+                    <label htmlFor="start">Statring Point</label>
                     <input
                       placeholder="hh:mm:ss"
                       onChange={(e) => {
@@ -156,7 +156,7 @@ class App extends React.Component {
                     />
                   </div>
                   <div className="label">
-                    <label htmlFor="duration">Duration: </label>
+                    <label htmlFor="duration">Total Duration </label>
                     <input
                       placeholder="hh:mm:ss"
                       onChange={(e) => {
@@ -199,18 +199,20 @@ class App extends React.Component {
           </section>
 
           {this.state.giff ? (
-            <div className="giffDownload">
-              <img src={this.state.giff} alt="giff" />
+            <section className="giffElement">
+              <div className="giffDownload">
+                <img src={this.state.giff} alt="giff" />
 
-              <button
-                className="button"
-                onClick={(e) => {
-                  this.downloadGiffHandler(this.state.giff);
-                }}
-              >
-                Download Giff
-              </button>
-            </div>
+                <button
+                  className="button"
+                  onClick={(e) => {
+                    this.downloadGiffHandler(this.state.giff);
+                  }}
+                >
+                  Download Giff
+                </button>
+              </div>
+            </section>
           ) : (
             ''
           )}

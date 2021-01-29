@@ -65,7 +65,7 @@ section.how-it-works::before {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #58468c;
 }
 .steps {
   display: flex;
@@ -77,7 +77,7 @@ main {
   grid-area: 4/2/-2/-2;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 main::before {
@@ -88,7 +88,7 @@ main::before {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #58468c;
 }
 .file h2 {
   width: 100%;
@@ -107,19 +107,18 @@ section.giffElement {
   width: 50%;
   padding: 50px;
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
 .giffDownload {
   display: flex;
-  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .giffDownload img {
-  width: 80%;
+  width: 100%;
+  border-radius: 10px;
 }
 .button {
   padding: 20px 60px;
@@ -138,11 +137,15 @@ section.giffElement {
   background-color: #2252e2;
 }
 .input-group .label {
-  /* border: 1px solid red; */
   padding: 10px 0;
   color: #ec5833;
   font-weight: bold;
   text-align: center;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
 }
 .input-group input[type='text'] {
   background-color: #fff;
@@ -152,9 +155,7 @@ section.giffElement {
   outline: none;
   border-radius: 10px;
 }
-.input-group input#duration {
-  margin-left: 5%;
-}
+
 input[type='text']:focus {
   box-shadow: 4px 5px 1px 0px rgba(126, 136, 142, 0.24);
 }
