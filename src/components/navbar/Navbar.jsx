@@ -6,9 +6,13 @@ class Navbar extends Component {
     return (
       <navbar>
         <h1 className="logo">v2g</h1>
-        <h3 className="name">
-          Created by: <span> Khan_Irfan</span>
-        </h3>
+        <div className="links">
+          <a href="#how-it-works">How it works</a>
+          <a href="#get-started">Get started</a>
+        </div>
+        <a className="contact" href="#footer">
+          Get in Touch
+        </a>
       </navbar>
     );
   }

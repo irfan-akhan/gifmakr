@@ -1,26 +1,60 @@
 footer {
   grid-area: -2/1/-1/-1;
-  background-color: #fda978cb;
-  padding: 30px 0;
+  background-color: #272727e3;
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-footer div:first-of-type {
-  padding: 20px;
-  font-weight: bolder;
+.contact_info {
+  width: 20vw;
+  text-align: start;
+  font-size: 13px;
 }
-footer h1 {
-  font-weight: 300;
-  font-size: 15px;
-  font-style: oblique;
+.contact_info h3 {
+  font-weight: normal;
 }
-footer .social_links {
-  text-align: center;
+.copy_right {
+  font-size: 13px;
+  align-self: flex-end;
+  font-style: italic;
+  font-weight: 100;
+  opacity: 0.7;
 }
-a {
+.footer_nav a {
   padding: 5px 10px;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 3s;
+  color: #ffffff;
+}
+.footer_nav a {
+  display: block;
+  text-align: start;
+  margin-left: 30px;
+  position: relative;
+}
+.footer_nav a::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0%;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  transition: all 0.4s;
+}
+.footer_nav a:hover::after {
+  width: 80%;
+}
+.social_links img {
+  width: 40px;
+  border-radius: 15px;
+  transition: all 0.5s;
 }
 a:hover img {
-  transform: scaleY(1.2);
+  background-color: rgb(44, 44, 236);
+  transform: scale(1.1);
 }

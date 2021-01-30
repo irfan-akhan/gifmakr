@@ -1,7 +1,7 @@
 .details {
   background-color: #ffffffe2;
   width: 30%;
-  height: 50vh;
+  height: 55vh;
   position: relative;
   box-sizing: border-box;
   padding: 20px;
@@ -10,7 +10,7 @@
   display: block;
   position: absolute;
   top: 40%;
-  right: 5%;
+  right: -3%;
   font-size: 30px;
   color: #58468c;
 }
@@ -28,7 +28,10 @@
   color: #58468c;
   font-size: 20px;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
-.description img {
+.details img {
   width: 80%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.623);
 }

@@ -7,7 +7,7 @@ class Details extends Component {
       <div className="details card">
         <h1 className="title">{this.props.title}</h1>
         <p className="description">{this.props.description}</p>
-        {/* <img src="" alt="" /> */}
+        <img src={this.props.imgSrc} alt="giff" />
         <span className="arrow">{this.props.arrow}</span>
       </div>
     );
