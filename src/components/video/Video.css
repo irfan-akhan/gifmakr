@@ -3,4 +3,5 @@ video {
   height: 360px;
   box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.223);
   outline: none;
+  margin-bottom: 1em;
 }

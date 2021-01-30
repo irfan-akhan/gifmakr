@@ -6,7 +6,6 @@ import Footer from './components/footer/Footer';
 import Video from './components/video/Video';
 
 import './App.css';
-import Info from './components/info/Info';
 import Details from './components/details/Details';
 class App extends React.Component {
   constructor(props) {
@@ -32,19 +31,15 @@ class App extends React.Component {
 
   videoChangeHandler = (e) => {
     const file = e.target.files[0];
-    console.log(this.state.video);
     this.setState({ video: file });
   };
 
   inputStartChangeHandler = (e) => {
-    console.log(e.target.value);
     this.setState({ start: e.target.value });
-    console.log('sate is: ', this.state.start);
   };
 
   inputDurationChangeHandler = (e) => {
     this.setState({ duration: e.target.value });
-    console.log('sate is: ', this.state.duration);
   };
 
   downloadGiffHandler = (address) => {
@@ -60,12 +55,11 @@ class App extends React.Component {
         });
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   };
 
   generateGiffHandler = async (e) => {
-    console.log('state', this.state.start, this.state.duration);
     // write file to local memory
     this.ffmpeg.FS(
       'writeFile',
@@ -141,6 +135,16 @@ class App extends React.Component {
             {this.state.video ? (
               <div className="controls">
                 <Video videoSrc={this.state.video} />
+                <div className="buttonWrap">
+                  <label className="newButton" htmlFor="upload">
+                    Upload
+                  </label>
+                  <input
+                    type="file"
+                    id="upload"
+                    onChange={(e) => this.videoChangeHandler(e)}
+                  />
+                </div>
                 <div className="input-group">
                   <div className="label">
                     <label htmlFor="start">Statring Point</label>
@@ -167,6 +171,7 @@ class App extends React.Component {
                     />
                   </div>
                 </div>
+
                 <button
                   className="button"
                   onClick={(e) => {

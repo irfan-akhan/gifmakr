@@ -1,12 +1,4 @@
-body {
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-  background-color: #fff;
-}
 .main_content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   padding: 4em 1em;
   position: absolute;
   top: 60%;
@@ -59,33 +51,22 @@ header {
       rgba(0, 0, 0, 0.515)
     ),
     url('https://fiverr-res.cloudinary.com/videos/so_6.708122,t_main1,q_auto,f_auto/xfunujxoa8tmo0d978zi/cut-merge-editing-background-creating-a-professional-video.png');
-  /* #4158d0; */
-
-  /* background-image: linear-gradient(
-    43deg,
-    #4158d0 10%,
-    #b8b4b7 50%,
-    #ffcc70 100%
-  ); */
-
-  background-position: right center;
+  background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 section.how-it-works {
   grid-area: 3/2/4/-2;
-  height: 90vh;
+  padding: 5em 0;
 }
 
 .steps {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 main {
   grid-area: 4/2/-2/-2;
   display: flex;
-  height: 90vh;
   justify-content: space-around;
   align-items: flex-start;
   position: relative;
@@ -144,6 +125,7 @@ section.giffElement {
   border: none;
   background-color: #587ded;
   color: #ffffff;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -172,6 +154,7 @@ section.giffElement {
   border-radius: 10px;
   border: 1px solid #00000046;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 input[type='text']:focus {
@@ -209,6 +192,7 @@ input[type='file'] {
   z-index: -1;
   top: 6px;
   left: 5%;
+  width: 60%;
   font-size: 15px;
   color: rgb(153, 153, 153);
 }
@@ -217,4 +201,60 @@ input[type='file'] {
 }
 img {
   width: 80px;
+}
+
+/* media queries */
+@media screen and (max-width: 992px) {
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .details {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .main_content h1 {
+    font-size: 24px;
+  }
+  input[type='file'] {
+    width: 70%;
+  }
+  section.videoPlayer {
+    width: 100%;
+    padding: 30px 10px;
+  }
+  .input-group {
+    display: block;
+  }
+  .newButton {
+    padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .newButton {
+    padding: 15px 20px;
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .main_content h1 {
+    font-size: 20px;
+  }
+  .input-group {
+    display: block;
+  }
+  .button {
+    padding: 20px 30px;
+    font-size: 12px;
+  }
 }

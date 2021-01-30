@@ -17,7 +17,7 @@ class Footer extends Component {
           <h3>&copy; 2021 v2g</h3>
         </div>
         <div className="contact_info">
-          <h2>Contact</h2>
+          <h2>Get in touch</h2>
           <h3>
             Hello there, My name is Irfan and I'm an aspiring web developer
           </h3>

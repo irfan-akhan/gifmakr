@@ -16,18 +16,12 @@ navbar {
   justify-self: flex-start;
   margin-left: 5vw;
   font-weight: bold;
-  position: relative;
+  background-color: #587ded;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 10px;
 }
-.logo::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  top: 95%;
-  left: 0;
-  background-color: #7d65c4;
-}
+
 .links {
   display: flex;
   align-items: center;
@@ -58,4 +52,44 @@ navbar a:hover::after {
   justify-self: flex-end;
   margin-right: 5vw;
   font-size: 20px;
+}
+@media only screen and (min-width: 481px) and (max-width: 660px) {
+  .contact {
+    font-size: 15px;
+  }
+  .links a {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+
+  .navbar {
+    width: 90%;
+  }
+  .contact {
+    font-size: 15px;
+  }
+  .links a {
+    font-size: 15px;
+  }
+  .logo {
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .links {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+  }
 }
