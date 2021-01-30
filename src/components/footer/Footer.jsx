@@ -12,7 +12,10 @@ class Footer extends Component {
             <a href="#get-started">Get Started</a>
           </div>
         </div>
-        <h1 className="copy_right">&copy; 2021 v2g</h1>
+        <div className="copy_right">
+          <h2>Built by Khan_Irfan</h2>
+          <h3>&copy; 2021 v2g</h3>
+        </div>
         <div className="contact_info">
           <h2>Contact</h2>
           <h3>
@@ -20,17 +23,17 @@ class Footer extends Component {
           </h3>
 
           <div className="social_links">
-            <a href="https://www.linkedin.com/in/irfan-khan-4a40b31b4/">
+            <a
+              href="https://www.linkedin.com/in/irfan-khan-4a40b31b4/"
+              target="_blank"
+            >
               <img
                 src="https://i.ibb.co/w7wrHq4/linkedin.png"
                 alt="linkedin"
               ></img>
             </a>
-            <a href="https://github.com/Irfan-akhan">
+            <a href="https://github.com/Irfan-akhan" target="_blank">
               <img src="https://i.ibb.co/SKB76WQ/github.png" alt="github"></img>
-            </a>
-            <a href="">
-              <i></i>
             </a>
           </div>
         </div>

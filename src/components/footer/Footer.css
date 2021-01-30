@@ -16,7 +16,7 @@ footer {
   font-weight: normal;
 }
 .copy_right {
-  font-size: 13px;
+  font-size: 10px;
   align-self: flex-end;
   font-style: italic;
   font-weight: 100;
@@ -53,8 +53,9 @@ footer {
   width: 40px;
   border-radius: 15px;
   transition: all 0.5s;
+  margin-right: 10px;
 }
 a:hover img {
-  background-color: rgb(44, 44, 236);
+  background-color: #0000008e;
   transform: scale(1.1);
 }

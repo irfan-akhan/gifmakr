@@ -9,15 +9,15 @@ body {
   align-items: flex-start;
   padding: 4em 1em;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
 .main_content h1 {
   width: 60vw;
   text-align: center;
   padding: 0;
-  color: #58468c;
+  color: #fff;
   font-size: 45px;
   font-weight: bolder;
 }
@@ -52,22 +52,31 @@ header {
   grid-area: 2/1/3/-1;
   height: 90vh;
   padding: 2.4em;
+
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.522),
+      rgba(0, 0, 0, 0.515)
+    ),
+    url('https://fiverr-res.cloudinary.com/videos/so_6.708122,t_main1,q_auto,f_auto/xfunujxoa8tmo0d978zi/cut-merge-editing-background-creating-a-professional-video.png');
+  /* #4158d0; */
+
+  /* background-image: linear-gradient(
+    43deg,
+    #4158d0 10%,
+    #b8b4b7 50%,
+    #ffcc70 100%
+  ); */
+
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 section.how-it-works {
   grid-area: 3/2/4/-2;
   height: 90vh;
-  position: relative;
 }
-section.how-it-works::before {
-  content: '';
-  display: block;
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #58468c;
-}
+
 .steps {
   display: flex;
   justify-content: space-between;
@@ -123,6 +132,7 @@ section.giffElement {
 .giffDownload img {
   width: 100%;
   height: 350px;
+  object-fit: contain;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.223);
 }
