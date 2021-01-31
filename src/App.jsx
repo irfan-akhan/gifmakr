@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { createFFmpeg, fetchFile } from '@ffmpeg/ffmpeg';
 
 import Navbar from './components/navbar/Navbar';
@@ -60,12 +60,15 @@ class App extends React.Component {
   };
 
   generateGiffHandler = async (e) => {
+    const loader = document.querySelector('.loader');
     // write file to local memory
     this.ffmpeg.FS(
       'writeFile',
       'buffer.mp4',
       await fetchFile(this.state.video),
     );
+    console.log(loader);
+    loader.style.display = 'block';
     //convert file to giff
     await this.ffmpeg.run(
       '-ss',
@@ -83,6 +86,7 @@ class App extends React.Component {
     // Read result from local memory
     const result = this.ffmpeg.FS('readFile', 'output.giff');
     // create a url
+    loader.style.display = 'none';
     const url = URL.createObjectURL(
       new Blob([result.buffer], { type: 'img/giff' }),
     );
@@ -221,6 +225,7 @@ class App extends React.Component {
             ''
           )}
         </main>
+        <div className="loader"></div>
         <Footer />
       </div>
     );
