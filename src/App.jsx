@@ -24,7 +24,7 @@ class App extends React.Component {
     await this.ffmpeg.load();
     this.setState({ load: true });
   };
-  componentWillMount() {
+  componentDidMount() {
     this.load();
   }
 
