@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+::-moz-selection {
+  color: #000000;
+  background: #eb7c5e;
+}
+
+::selection {
+  color: #000000;
+  background: #eb7c5e;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
