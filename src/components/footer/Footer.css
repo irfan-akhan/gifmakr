@@ -75,6 +75,7 @@ a:hover img {
     font-size: 13px;
   }
   .copy_right {
+    order: 2;
     padding: 10px;
     align-self: center;
     font-style: normal;
@@ -106,6 +107,7 @@ a:hover img {
     font-size: 10px;
   }
   .copy_right {
+    order: 2;
     padding: 10px;
     align-self: center;
     font-style: normal;

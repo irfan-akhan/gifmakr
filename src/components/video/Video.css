@@ -5,3 +5,8 @@ video {
   outline: none;
   margin-bottom: 1em;
 }
+@media only screen and (max-width: 320px) {
+  video {
+    height: 150px;
+  }
+}

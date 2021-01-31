@@ -82,13 +82,14 @@ main::before {
   background-color: #58468c;
 }
 .file {
-  margin-top: 30%;
+  margin: 30% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .file h2 {
-  width: 100%;
   text-align: center;
-  margin: 0 auto;
-  width: 40vw;
 }
 section.videoPlayer {
   width: 50%;
@@ -168,8 +169,8 @@ input[type='text']:focus {
   align-items: center;
 }
 .newButton {
-  display: inline-block;
   padding: 15px 40px;
+  display: block;
   cursor: pointer;
   border-radius: 20px;
   text-transform: uppercase;
@@ -180,7 +181,6 @@ input[type='text']:focus {
   border: 1px solid transparent;
   color: #fff;
   transition: all 0.3s;
-  width: 80%;
 }
 
 .newButton:hover {
@@ -204,11 +204,8 @@ img {
 }
 
 /* media queries */
-@media screen and (max-width: 992px) {
-}
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .steps {
     display: flex;
     flex-direction: column;
@@ -217,11 +214,26 @@ img {
   }
   .details {
     width: 80%;
+    margin: 0;
     margin-bottom: 10%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section.giffElement {
+    width: 80%;
+    padding: 5px;
+  }
+  .giffDownload img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* Styles */
   .main_content h1 {
     font-size: 24px;
   }

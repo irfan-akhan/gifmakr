@@ -77,7 +77,8 @@ navbar a:hover::after {
     font-size: 15px;
   }
   .logo {
-    padding: 5px 10px;
+    padding: 10px 30px;
+    font-size: 26px;
     color: #fff;
     border-radius: 10px;
   }
