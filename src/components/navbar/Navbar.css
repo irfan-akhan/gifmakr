@@ -9,7 +9,7 @@ navbar {
   padding: 20px 10px;
   color: #57468b;
   background-color: #fff;
-  z-index: 1;
+  z-index: 4;
   border-bottom: 1px solid rgba(128, 128, 128, 0.384);
 }
 .logo {

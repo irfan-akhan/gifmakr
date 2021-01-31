@@ -204,16 +204,77 @@ img {
   width: 80px;
 }
 .loader {
-  height: 90vh;
-  background-color: red;
-  z-index: 5;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 2;
   display: none;
-  position: fixed;
-  top: 10%;
+  position: absolute;
+  top: 0%;
   width: 100vw;
+  outline: 1px solid #3498db;
+  outline-offset: -10rem;
+  outline-width: 1rem;
+  outline-style: groove;
 }
-/* media queries */
+.loader h1 {
+  margin-top: 30vh;
+}
+.loader #content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+#content .c {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  float: left;
+}
+.c::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  animation: loaderAnimation 1s infinite;
+}
 
+.c:nth-of-type(2)::before {
+  animation-delay: 0.1s;
+}
+.c:nth-of-type(3)::before {
+  animation-delay: 0.2s;
+}
+.c:nth-of-type(4)::before {
+  animation-delay: 0.1s;
+}
+.c:nth-of-type(5)::before {
+  animation-delay: 0.2s;
+}
+.c:nth-of-type(6)::before {
+  animation-delay: 0.3s;
+}
+.c:nth-of-type(7)::before {
+  animation-delay: 0.4s;
+}
+.c:nth-of-type(8)::before {
+  animation-delay: 0.3s;
+}
+/* animation */
+
+@keyframes loaderAnimation {
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+/* media queries */
 @media screen and (max-width: 820px) {
   .steps {
     display: flex;
@@ -231,6 +292,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   section.giffElement {
     width: 80%;
@@ -242,9 +304,21 @@ img {
     margin-bottom: 20px;
   }
 }
+@media only screen and (min-width: 480px) and (max-width: 660px) {
+  .loader {
+    outline-offset: -5rem;
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .main_content h1 {
     font-size: 24px;
+  }
+  .loader {
+    outline-offset: -5rem;
+  }
+  .loader h1 {
+    margin-top: 0vh;
+    font-size: 15px;
   }
   input[type='file'] {
     width: 70%;
@@ -276,6 +350,12 @@ img {
   }
   .button {
     padding: 20px 30px;
+    font-size: 12px;
+  }
+  .loader {
+    outline-offset: -2rem;
+  }
+  .loader h1 {
     font-size: 12px;
   }
 }

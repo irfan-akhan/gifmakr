@@ -229,8 +229,22 @@ class App extends React.Component {
           ) : (
             ''
           )}
+          <div className="loader">
+            <div id="content">
+              <h1>Converting</h1>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+              <span className="c"></span>
+            </div>
+          </div>
         </main>
-        <div className="loader"></div>
+
         <Footer />
       </div>
     );
