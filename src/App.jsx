@@ -59,36 +59,44 @@ class App extends React.Component {
   };
 
   generateGiffHandler = async (e) => {
+    console.log('gene');
     const loader = document.querySelector('.loader');
-    // write file to local memory
-    this.ffmpeg.FS(
-      'writeFile',
-      'buffer.mp4',
-      await fetchFile(this.state.video),
-    );
-    loader.style.display = 'block';
-    //convert file to giff
-    await this.ffmpeg.run(
-      '-ss',
-      `${this.state.start}`,
-      '-t',
-      `${this.state.duration}`,
-      '-i',
-      'buffer.mp4',
-      '-r',
-      '15',
-      '-f',
-      'gif',
-      'output.giff',
-    );
-    // Read result from local memory
-    const result = this.ffmpeg.FS('readFile', 'output.giff');
-    // create a url
-    loader.style.display = 'none';
-    const url = URL.createObjectURL(
-      new Blob([result.buffer], { type: 'img/giff' }),
-    );
-    this.setState({ giff: url });
+    try {
+      loader.style.display = 'block';
+      console.log('In try');
+      // write file to local memory
+      this.ffmpeg.FS(
+        'writeFile',
+        'buffer.mp4',
+        await fetchFile(this.state.video),
+      );
+      //convert file to giff
+      await this.ffmpeg.run(
+        '-ss',
+        `${this.state.start}`,
+        '-t',
+        `${this.state.duration}`,
+        '-i',
+        'buffer.mp4',
+        '-r',
+        '15',
+        '-f',
+        'gif',
+        'output.giff',
+      );
+      // Read result from local memory
+      const result = this.ffmpeg.FS('readFile', 'output.giff');
+      // create a url
+      loader.style.display = 'none';
+      const url = URL.createObjectURL(
+        new Blob([result.buffer], { type: 'img/giff' }),
+      );
+      this.setState({ giff: url });
+    } catch (error) {
+      setTimeout(this.generateGiffHandler, 3000);
+      console.log('in error');
+    }
+    console.log('gene 2');
   };
 
   render() {
