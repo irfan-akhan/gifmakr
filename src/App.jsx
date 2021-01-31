@@ -93,7 +93,7 @@ class App extends React.Component {
       );
       this.setState({ giff: url });
     } catch (error) {
-      setTimeout(this.generateGiffHandler, 3000);
+      setTimeout(this.generateGiffHandler, 9000);
       console.log('in error');
     }
     console.log('gene 2');
