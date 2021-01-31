@@ -24,7 +24,7 @@ class App extends React.Component {
     await this.ffmpeg.load();
     this.setState({ load: true });
   };
-  componentDidMount() {
+  componentWillMount() {
     this.load();
   }
 
@@ -48,7 +48,7 @@ class App extends React.Component {
           const url = window.URL.createObjectURL(new Blob([buffer]));
           const link = document.createElement('a');
           link.href = url;
-          link.setAttribute('download', 'image.png'); //or any other extension
+          link.setAttribute('download', 'image.png');
           document.body.appendChild(link);
           link.click();
         });
