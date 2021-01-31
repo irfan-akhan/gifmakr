@@ -120,7 +120,7 @@ section.giffElement {
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.223);
 }
 .button {
-  padding: 20px 60px;
+  padding: 20px 30px;
   margin: 20px auto;
   border-radius: 10px;
   outline: none;
@@ -217,7 +217,7 @@ img {
   outline-style: groove;
 }
 .loader h1 {
-  margin-top: 30vh;
+  color: #3498db;
 }
 .loader #content {
   position: absolute;
@@ -349,7 +349,7 @@ img {
     display: block;
   }
   .button {
-    padding: 20px 30px;
+    padding: 10px 20px;
     font-size: 12px;
   }
   .loader {
