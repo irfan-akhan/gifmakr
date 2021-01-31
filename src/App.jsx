@@ -24,8 +24,7 @@ class App extends React.Component {
     await this.ffmpeg.load();
     this.setState({ load: true });
   };
-
-  componentDidMount() {
+  componentWillMount() {
     this.load();
   }
 
@@ -67,7 +66,6 @@ class App extends React.Component {
       'buffer.mp4',
       await fetchFile(this.state.video),
     );
-    console.log(loader);
     loader.style.display = 'block';
     //convert file to giff
     await this.ffmpeg.run(
@@ -91,7 +89,6 @@ class App extends React.Component {
       new Blob([result.buffer], { type: 'img/giff' }),
     );
     this.setState({ giff: url });
-    console.log('in giff', url);
   };
 
   render() {
