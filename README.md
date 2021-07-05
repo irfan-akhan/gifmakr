@@ -1,6 +1,6 @@
 # Video2giff
 
-React application that converts videos to giff files with custom duration.
+## React application that converts videos to giff files with custom duration.
 
 ## Available Scripts
 
